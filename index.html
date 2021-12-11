@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        .container {
+            position:relative;
+            background-color: #366141;
+            width: 23%;
+            margin: 10% auto;
+            display: block;
+            width-min:500px;
+        }
+
+        .white-keys{
+            z-index:1;
+            position: absolute;
+        }
+        .black-keys{
+            left:30%;
+            z-index:2;
+            position: absolute;
+        }
+        .white-keys kbd {
+            display: inline-block;
+            background-color: #fff;
+
+            border: 1px gray solid;
+            margin-left: 0px;
+            text-align: center;
+            min-width: 50px;
+            min-height: 80px;
+        }
+
+        .black-keys kbd {
+            margin: 0 10px;
+            display: inline-block;
+            background-color: #000;
+            color:white;
+            border: 1px gray solid;
+            margin-left: 0px;
+            text-align: center;
+            min-width: 20px;
+            min-height: 30px;
+        }
+
+        body {
+            background-color: #366141;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="white-keys">
+    <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>G</kbd><kbd>H</kbd><kbd>J</kbd>
+    </div>
+    <div class="black-keys">
+        <kbd>W</kbd><kbd>E</kbd><kbd>T</kbd><kbd>Y</kbd><kbd>U</kbd>
+    </div>
+</div>
+<script>
+
+
+    document.addEventListener("keypress", (e) => {
+        if (e.code === "KeyA") {
+            var foo = new Audio("./A.mp3");
+            foo.play();
+        }
+    });
+    document.addEventListener("keypress", (e) => {
+        if (e.code === "KeyS") {
+            var foo = new Audio("./S.mp3");
+            foo.play();
+        }
+    });
+    document.addEventListener("keypress", (e) => {
+        if (e.code === "KeyD") {
+            var foo = new Audio("./D.mp3");
+            foo.play();
+        }
+    });
+    document.addEventListener("keypress", (e) => {
+        if (e.code === "KeyF") {
+            var foo = new Audio("./F.mp3");
+            foo.play();
+        }
+    });
+    document.addEventListener("keypress", (e) => {
+        if (e.code === "KeyG") {
+            var foo = new Audio("./G.mp3");
+            foo.play();
+        }
+    });
+    document.addEventListener("keypress", (e) => {
+        if (e.code === "KeyH") {
+            var foo = new Audio("./H.mp3");
+            foo.play();
+        }
+    });
+    document.addEventListener("keypress", (e) => {
+        if (e.code === "KeyJ") {
+            var foo = new Audio("./J.mp3");
+            foo.play();
+        }
+    });
+
+
+</script>
+</body>
+</html>
